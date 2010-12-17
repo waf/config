@@ -16,6 +16,8 @@ export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig
 autoload promptinit
 promptinit
 export PS1="%B%{$fg%}%n%{$reset_color%}@%m:%b%~> "
+# root prompt:
+# export PS1="%B%{$fg[red]%}%n%b%{$reset_color%}%B@%m:%b%~> "
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
