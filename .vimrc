@@ -1,5 +1,4 @@
 set nu
-colo wombat
 colo molokai
 set clipboard=unnamed
 syntax enable
