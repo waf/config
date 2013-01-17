@@ -1,16 +1,48 @@
 
-URxvt*background:      	#242424
-URxvt*foreground:      	#ffffff
-#URxvt*font:				xft:Bitstream Vera Sans mono:size=12
-#URxvt*font:				xft:inconsolata:size=14:antialias=false
-URxvt*font:				xft:inconsolata:size=14
+URxvt*font:			xft:inconsolata:size=10
 URxvt*scrollBar:		false
 URxvt*scrollBar:		false
-URxvt*color4:			#8ac6f2
-URxvt*color12:			#8ac6f2
 URxvt.urgentOnBell:		true
+urxvt.boldMode: false
+urxvt*transparent: true
+urxvt*shading: 10
+urxvt.borderless: true
+
+Xft.antialias: true
+Xft.hinting: full
+Xft.hintstyle: hintfull
+Xft.rgba: rgb
+
+! based off of thayer colors
+*background: #222222
+*foreground: #eeeeee
+!black
+*color0: #262729
+*color8: #554444
+!red
+*color1: #F92672
+*color9: #FF669D
+!green
+*color2: #A6E22E
+*color10: #BEED5F
+!yellow
+*color3: #FD971F
+*color11: #E6DB74
+!blue
+*color4: #0190bc
+*color12: #0190bc
+!magenta
+*color5: #9E6FFE
+*color13: #9E6FFE
+!cyan
+*color6: #5E7175
+*color14: #A3BABF
+!white
+*color7: #CCCCC6
+*color15: #F8F8F2
 
 # URLs
-URxvt*perl-ext-common:  default,matcher
+URxvt*perl-ext:  default,url-select
 URxvt*matcher.button:   1
-URxvt*urlLauncher:      chromium-browser
+URxvt*url-select.launcher:      chromium
+URxvt*url-select.underline:     true

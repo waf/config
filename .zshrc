@@ -5,7 +5,6 @@ unset manpath
 
 export TERM=rxvt-256color
 export CFLAGS="$CFLAGS -march=native"
-#export PATH=$PATH:/opt/java/bin
 export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig
 
 # default apps
@@ -13,11 +12,9 @@ export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig
 (( ${+EDITOR} ))   || export EDITOR="vim"
 
 # Prompt
-autoload promptinit
-promptinit
-export PS1="%B%{$fg%}%n%{$reset_color%}@%m:%b%~> "
-# root prompt:
-# export PS1="%B%{$fg[red]%}%n%b%{$reset_color%}%B@%m:%b%~> "
+autoload promptinit && promptinit
+autoload -U colors && colors
+export PS1="%{$fg_bold[green]%}%B%n%b%{$reset_color%}%B@%m%b:%~> "
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
