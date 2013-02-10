@@ -3,9 +3,10 @@ URxvt*font:			xft:inconsolata:size=10
 URxvt*scrollBar:		false
 URxvt*scrollBar:		false
 URxvt.urgentOnBell:		true
-urxvt.boldMode: false
+!urxvt.boldMode: false
 urxvt*transparent: true
 urxvt*shading: 10
+!urxvt.xftAntialias: true
 urxvt.borderless: true
 
 Xft.antialias: true
@@ -13,12 +14,14 @@ Xft.hinting: full
 Xft.hintstyle: hintfull
 Xft.rgba: rgb
 
-! based off of thayer colors
+!thayer colors
+ 
 *background: #222222
 *foreground: #eeeeee
 !black
 *color0: #262729
 *color8: #554444
+ 
 !red
 *color1: #F92672
 *color9: #FF669D
@@ -29,6 +32,8 @@ Xft.rgba: rgb
 *color3: #FD971F
 *color11: #E6DB74
 !blue
+!*color4: #66D9EF
+!*color12: #66D9EF
 *color4: #0190bc
 *color12: #0190bc
 !magenta
@@ -44,5 +49,8 @@ Xft.rgba: rgb
 # URLs
 URxvt*perl-ext:  default,url-select
 URxvt*matcher.button:   1
-URxvt*url-select.launcher:      chromium
+URxvt*url-select.launcher:      google-chrome
 URxvt*url-select.underline:     true
+
+#urxvt*transparent: true
+#urxvt*shading: 30
