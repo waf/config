@@ -1,10 +1,7 @@
-set nu
+" standard vim options
 colo molokai
-set clipboard=unnamed
 syntax enable
-filetype on
-filetype plugin indent on
-
+set nocompatible
 set tabstop=4
 set shiftwidth=4
 set expandtab
@@ -13,13 +10,25 @@ set smartcase
 set nowrap
 set visualbell t_vb=
 set encoding=utf-8
+set clipboard=unnamed
 set relativenumber
 
-"let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
-set ofu=syntaxcomplete#Complete
-let g:pep8_map='<leader>8'
-au FileType python set omnifunc=pythoncomplete#Complete
-let g:SuperTabDefaultCompletionType = "context"
-call pathogen#infect() 
+"vundle config
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'gmarik/vundle'
+Bundle 'ervandew/supertab'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'Lokaltog/powerline'
+Bundle 'mattn/zencoding-vim'
+Bundle 'vim-scripts/vim-javascript'
+Bundle 'vim-scripts/VimClojure'
+Bundle 'git://git.wincent.com/command-t.git'
+filetype plugin indent on
 
+" plugin config
+set ofu=syntaxcomplete#Complete
+let g:SuperTabDefaultCompletionType = "context"
 let vimclojure#ParenRainbow=1
+set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
