@@ -12,6 +12,7 @@ set visualbell t_vb=
 set encoding=utf-8
 set clipboard=unnamed
 set relativenumber
+set ofu=syntaxcomplete#Complete
 
 "vundle config
 filetype off
@@ -28,7 +29,6 @@ Bundle 'git://git.wincent.com/command-t.git'
 filetype plugin indent on
 
 " plugin config
-set ofu=syntaxcomplete#Complete
 let g:SuperTabDefaultCompletionType = "context"
 let vimclojure#ParenRainbow=1
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
