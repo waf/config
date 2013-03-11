@@ -35,3 +35,6 @@ let g:SuperTabDefaultCompletionType = "context"
 let g:EasyMotion_leader_key = '<Leader>'
 let vimclojure#ParenRainbow=1
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+let g:html_indent_inctags = "html,body,head,tbody"
+let g:html_indent_script1 = "inc"
+let g:html_indent_style1 = "inc"
