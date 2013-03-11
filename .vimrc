@@ -14,6 +14,7 @@ set clipboard=unnamed
 set relativenumber
 set ofu=syntaxcomplete#Complete
 set laststatus=2
+let mapleader=","
 
 "vundle config
 filetype off
@@ -31,5 +32,6 @@ filetype plugin indent on
 
 " plugin config
 let g:SuperTabDefaultCompletionType = "context"
+let g:EasyMotion_leader_key = '<Leader>'
 let vimclojure#ParenRainbow=1
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
