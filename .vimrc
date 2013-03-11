@@ -13,6 +13,7 @@ set encoding=utf-8
 set clipboard=unnamed
 set relativenumber
 set ofu=syntaxcomplete#Complete
+set laststatus=2
 
 "vundle config
 filetype off
