@@ -11,7 +11,6 @@
 
 set $mod Mod4
 workspace_auto_back_and_forth yes
-auto_hide_edge_borders yes
 new_window pixel 3
 client.focused #0190bc #0190bc #ffffff #21b0dc
 client.unfocused #222222 #222222 #ffffff #ffffff
