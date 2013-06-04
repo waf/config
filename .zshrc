@@ -1,7 +1,6 @@
 # Aliases
 alias ls='ls --color=auto'
-alias texi2pdf='texi2pdf --clean'
-unset manpath
+alias grep='grep --color'
 
 export TERM=rxvt-256color
 export CFLAGS="$CFLAGS -march=native"
