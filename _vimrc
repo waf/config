@@ -24,8 +24,8 @@ set wildmenu
 set incsearch
 set lazyredraw
 set ttyfast
-set backupdir=~/vimfiles/temp
-set directory=~/vimfiles/temp
+set backupdir=/users/will/vimfiles/temp
+set directory=/users/will/vimfiles/temp
 set backspace=indent,eol,start
 let mapleader=","
 set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
@@ -34,20 +34,23 @@ runtime! macros/matchit.vim
 
 "vundle config
 filetype off
-set rtp+=~/vimfiles/bundle/vundle/
-call vundle#rc("~/vimfiles/bundle")
-Bundle 'gmarik/vundle'
-Bundle 'ervandew/supertab'
-Bundle 'Lokaltog/powerline'
-Bundle 'mattn/emmet-vim'
-Bundle 'vim-scripts/vim-javascript'
-Bundle 'kien/rainbow_parentheses.vim'
-Bundle 'tomasr/molokai'
+set rtp+=/users/will/vimfiles/bundle/Vundle.vim/
+call vundle#begin("/users/will/vimfiles/bundle")
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'ervandew/supertab'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'mattn/emmet-vim'
+Plugin 'vim-scripts/vim-javascript'
+Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'tomasr/molokai'
+Plugin 'PProvost/vim-ps1'
+call vundle#end()
 filetype plugin indent on
 
 " plugin config
 let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+set rtp+=/users/will/vimfiles/bundle/powerline/powerline/bindings/vim
 let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
 let g:html_indent_style1 = "inc"
