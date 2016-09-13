@@ -1,5 +1,6 @@
 " standard vim options
 syntax enable
+set renderoptions=type:directx
 set nocompatible
 set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 set guifont=Consolas:h12:cANSI
