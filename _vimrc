@@ -71,6 +71,12 @@ if has("gui_running")
     let g:airline_powerline_fonts = 1
 endif
 
+" fold configuration
+set foldcolumn=1
+let g:xml_syntax_folding=1
+au FileType xml setlocal foldmethod=syntax
+au FileType html setlocal foldmethod=indent
+autocmd FileType html,xml :%foldopen!
 
 map H ^
 map L $
