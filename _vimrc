@@ -41,22 +41,18 @@ runtime! macros/matchit.vim
 " make 'K' split lines. the opposite of 'J' (join lines)
 nnoremap K <Esc>i<CR><Esc>
 
-"vundle config
-filetype off
-set rtp+=~/vimfiles/bundle/Vundle.vim/
-call vundle#begin("~/vimfiles/bundle")
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'ervandew/supertab'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'mattn/emmet-vim'
-Plugin 'vim-scripts/vim-javascript'
-Plugin 'kien/rainbow_parentheses.vim'
-Plugin 'PProvost/vim-ps1'
-Plugin 'dracula/vim'
-Plugin 'leafgarland/typescript-vim'
-call vundle#end()
-filetype plugin indent on
+"vim-plug config
+call plug#begin()
+Plug 'ervandew/supertab'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'mattn/emmet-vim'
+Plug 'vim-scripts/vim-javascript'
+Plug 'kien/rainbow_parentheses.vim'
+Plug 'PProvost/vim-ps1'
+Plug 'dracula/vim'
+Plug 'leafgarland/typescript-vim'
+call plug#end()
 
 " plugin config
 let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
