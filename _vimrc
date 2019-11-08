@@ -52,9 +52,13 @@ Plug 'kien/rainbow_parentheses.vim'
 Plug 'PProvost/vim-ps1'
 Plug 'dracula/vim'
 Plug 'leafgarland/typescript-vim'
+Plug 'OmniSharp/omnisharp-vim'
+Plug 'dense-analysis/ale'
 call plug#end()
 
 " plugin config
+let g:OmniSharp_server_stdio = 1
+let g:airline#extensions#ale#enabled = 1
 let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
 let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
