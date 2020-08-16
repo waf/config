@@ -1,3 +1,9 @@
+# Module installation:
+# Install-Module -Name PSReadLine -AllowPrerelease -Scope CurrentUser -Force
+# Install-Module -Name posh-git -Scope CurrentUser
+# Install-Module -Name oh-my-posh -Scope CurrentUser
+# Install-Module -Name z -Scope CurrentUser
+
 if ($host.Name -eq 'ConsoleHost')
 {
     Import-Module PSReadLine
@@ -30,6 +36,8 @@ if ($host.Name -eq 'ConsoleHost')
     Import-Module oh-my-posh
     $DefaultUser = 'wafuqua' # hide "username@host" when on localhost and this user.
     Set-Prompt
+
+    Import-Module z # track frequently used directories and jump to them with z
 
     function ls_alias { & 'C:\Program Files\Git\usr\bin\ls' --color=auto -hF $args }
     Set-Alias -Name ls -Value ls_alias -Option Private
