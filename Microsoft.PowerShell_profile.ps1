@@ -20,6 +20,8 @@ if ($host.Name -eq 'ConsoleHost')
     Set-PSReadLineKeyHandler -Key Ctrl+v -Function Paste
     Set-PSReadLineKeyHandler -Key Shift+LeftArrow -Function SelectBackwardChar
     Set-PSReadLineKeyHandler -Key Shift+RightArrow -Function SelectForwardChar
+    Set-PSReadLineKeyHandler -Key Ctrl+Shift+LeftArrow -Function SelectBackwardWord
+    Set-PSReadLineKeyHandler -Key Ctrl+Shift+RightArrow -Function SelectNextWord
     
     # Dracula colors for PSReadLine -- works in conhost and wt -- install colors from https://github.com/dracula/powershell
     Set-PSReadlineOption -Color @{
