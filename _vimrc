@@ -4,11 +4,9 @@ syntax enable
 set renderoptions=type:directx
 set nocompatible
 set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
-set guifont=Powerline_Consolas:h12:cANSI " https://github.com/liangfeng/consolas-font-for-airline
+set guifont=Cascadia\ Mono\ PL:h14:cANSI " https://github.com/liangfeng/consolas-font-for-airline
 set guioptions-=m
 set guioptions-=T
-set lines=30
-set columns=100
 set tabstop=4
 set shiftwidth=4
 set expandtab
@@ -30,13 +28,16 @@ set lazyredraw
 set ttyfast
 set backupdir=~/vimfiles/temp
 set directory=~/vimfiles/temp
+set undodir=~/vimfiles/temp
 set backspace=indent,eol,start
 let mapleader=","
 set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
 set formatoptions+=j " Delete comment character when joining commented lines
 set noeb vb t_vb=
-set shell=powershell
-set shellcmdflag=-command
+set shell=C:\Windows\System32\wsl.exe
+set shellpipe=|
+set shellredir=>
+set shellcmdflag=
 runtime! macros/matchit.vim
 " make 'K' split lines. the opposite of 'J' (join lines)
 nnoremap K <Esc>i<CR><Esc>
@@ -84,3 +85,6 @@ map L $
 " From http://vimrcfu.com/snippet/14
 vnoremap < <gv
 vnoremap > >gv
+
+com! FormatXML :%!python3 -c "import xml.dom.minidom, sys; print(xml.dom.minidom.parse(sys.stdin).toprettyxml())"
+com! FormatJSON :%!python3 -m json.tool
